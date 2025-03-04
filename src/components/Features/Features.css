@@ -1,0 +1,111 @@
+.card-container {
+    height: auto;
+    width: 100vw;
+}
+
+.features-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 30px; /* Space between cards */
+}
+
+.card-item {
+    border: 1px solid #7777774c;
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    transition: 0.2s;
+    margin-top: calc(40vw / 15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item:hover {
+    transition: 0.3s;
+    transform: scale(1.03);
+}
+
+.header-card-3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.p-card {
+    font-size: 16px;
+    text-align: center;
+}
+
+.icon-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-card {
+    font-size: 55px !important;
+    margin-bottom: 25px !important;
+    color: #2e62d4;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens (e.g. iPads, 768px and below) */
+@media screen and (max-width: 768px) {
+    .features-card-container {
+        margin: 20px;
+        flex-direction: column;
+        align-items: stretch; /* Stack cards vertically */
+    }
+
+    .card-item {
+        width: 80%; /* Make cards fill most of the screen width */
+        height: auto; /* Allow height to adjust automatically */
+        margin-top: 20px; /* Adjust margin for vertical alignment */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-card {
+        font-size: 45px !important; /* Smaller icons for smaller screens */
+    }
+
+    .header-card-3 {
+        font-size: 20px; /* Smaller text for mobile */
+    }
+
+    .p-card {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+}
+
+/* For mobile phones (600px and below) */
+@media screen and (max-width: 600px) {
+    .features-card-container {
+        margin: 10px;
+    }
+
+    .card-item {
+        width: 100%; /* Full width for each card */
+        margin-top: 10px; /* Tighten up spacing */
+    }
+
+    .icon-card {
+        font-size: 40px !important; /* Further reduce icon size */
+    }
+
+    .header-card-3 {
+        font-size: 18px; /* Smaller text for mobile */
+    }
+
+    .p-card {
+        font-size: 12px; /* Smaller text for mobile */
+    }
+}

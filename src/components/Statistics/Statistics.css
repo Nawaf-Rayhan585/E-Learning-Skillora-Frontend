@@ -1,0 +1,92 @@
+.statistics {
+  background: #0b1936;
+  width: 100%;
+  min-height: 200px; /* Set a minimum height to make sure the section doesn't shrink too much */
+}
+
+.wrapper-statistics {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 0 250px; /* Added padding to avoid content sticking to edges */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+.container-statistics {
+  width: 10vw; /* Set the container width to a percentage of the screen width */
+  height: 20vh; /* Allow height to be dynamic based on content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 1em;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.container-statistics:hover {
+  transform: scale(1.03); /* Add hover effect for interactivity */
+}
+
+.icon-stats {
+  color: #fdfdfd;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+span.num {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2.3em;
+}
+
+span.text {
+  color: #e0e0e0;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-statistics {
+      gap: 15px;
+  }
+
+  .container-statistics {
+      width: 100%; /* Adjust width for tablets */
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-statistics {
+      gap: 30px;
+      justify-content: center;
+  }
+
+  .container-statistics {
+    width: 60vw; /* Full width for mobile */
+      height: 30vmin;
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-statistics {
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .container-statistics {
+      height: auto;
+      font-size: 12px;
+  }
+
+  .statistics {
+      margin-top: 200px; /* Reduced margin-top for better positioning */
+  }
+}

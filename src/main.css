@@ -1,0 +1,87 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* css used multiple times */
+
+
+/* button */
+/*  button layout */
+
+.button-flex {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+.btn-fill {
+  background-color: #3675ff !important;
+  border: 1px solid #3675ff !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 15px 35px !important;
+  border-radius: 10px !important;
+  transition: 0.3s !important;
+}
+
+.btn-fill:hover {
+  background-color: #0c49cc !important;
+}
+
+
+.btn-outline {
+  background-color: transparent !important;
+  color: #3675ff !important;
+  border: 1px solid #3675ff !important;
+  padding: 15px 35px !important;
+  border-radius: 10px !important;
+  transition:  0.3s !important;
+}
+
+.btn-outline:hover {
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  transition: 0.3s !important;
+}
+
+/* layout */
+
+.container-flex {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+/* center-text */
+
+.text-center {
+  text-align: center;
+}
+
+/* style */
+
+.highlight {
+  background: #b7cfff;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block {
+  animation: appear linear 10s;
+  animation-timeline: view();
+  animation-range: entry 0;
+}

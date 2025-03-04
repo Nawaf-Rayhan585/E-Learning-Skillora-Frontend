@@ -1,0 +1,122 @@
+/* General Styles */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.container-form {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 1200px;
+    padding: 80px;
+    width: 100%;
+    border: 2px solid #ddd;
+}
+
+.illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    display: block;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #ddd;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-form {
+        flex-direction: column;
+        max-width: 600px;
+    }
+
+    .illustration {
+        padding: 20px 40px;
+    }
+
+    .contact-form {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .illustration {
+        padding: 10px 20px;
+    }
+
+    .contact-form {
+        padding: 10px 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,185 @@
+article {
+    margin-top: 100px;
+    --img-scale: 1.001;
+    --title-color: rgb(0, 0, 0);
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    box-shadow: rgba(12, 75, 192, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  .container-price-course {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .course-name-course {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+    transition: color 0.4s ease-in-out;
+  }
+
+  
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d2b44;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: #2d2b44 1px solid;
+    margin-top: 20px;
+    border-radius: 50px;
+  }
+  
+  .context {
+    font-size: 15px;
+  }
+
+  article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .article-body {
+    padding: 20px;
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--title-color);
+    padding: 10px 15px;
+    background: #2d2b44;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  article a:focus {
+    outline: 1px dotted #323749;
+  }
+  
+  article a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #3245b1;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  .button-back {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d2b44;
+    margin-left: 200px;
+    padding: 10px 30px;
+    border: #2d2b44 1px solid;
+    border-radius: 10px;
+  }
+  
+  
+  /************************ 
+  Generic layout (demo looks)
+  **************************/
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .articles {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  
+  @container card (min-width: 380px) {
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+    .article-body {
+      padding-left: 0;
+    }
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    figure img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+  .nocourse {
+    text-align: center;
+  }
+
+  .nocourse-context {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .icon-nocourse {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
